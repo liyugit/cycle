@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>google+圈子</title>
+<style type="text/css">
+.clearfix:after {
+	content:'\20';
+	display:block;
+	height:0;
+	clear:both;
+}
+.clearfix {
+	zoom:1;
+}
+.cycle{
+	float: left;
+	width:120px;
+	height:120px;
+	margin-right: 20px;
+}
+.out-side{
+	position: relative;
+	width:60px;
+	height:60px;
+	border:1px solid blue;
+	-moz-border-radius:60px;
+	-webkit-border-radius:60px;
+	border-radius:60px;
+	background-color: #fff;
+	-webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition:all 0.5s ease 0s;
+
+}
+.in-side{
+	position: absolute;
+	top:5px;
+	left:5px;
+	width:50px;
+	height:50px;
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+	border-radius:50px;
+	background-color: blue;
+	text-align:center;
+	line-height:50px;
+	color: #fff;
+	font-size:12px;
+	-webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+}
+.friend{
+	opacity: 0;
+
+}
+.friend,
+.friend img{
+	width:30px;
+	height:30px;
+	float: left;
+	-moz-border-radius:30px;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+	-webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+}
+
+.friend:hover{
+	border:1px solid blue;
+	z-index:21;
+}
+
+#cycleContainer div.cycle-hover{
+	width:120px;
+	height:120px;
+	-moz-border-radius:120px;
+	-webkit-border-radius:120px;
+	border-radius:120px;
+
+}
+#cycleContainer div.cycle-hover .in-side{
+	top:30px;
+	left:30px;
+	width:60px;
+	height:60px;
+	-moz-border-radius:60px;
+	-webkit-border-radius:60px;
+	border-radius:60px;
+	line-height:60px;
+
+}
+#cycleContainer .friend-hover{
+	opacity: 1;
+	-webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+}
+.friend-not-in-cycle{
+	margin-bottom: 20px;
+	height:50px;
+}
+.not-friend {
+	margin-right:20px;
+	width:100px;
+	height:50px;
+	line-height:50px;
+	border:1px solid blue;
+	display: inline-block;
+	text-decoration:none;
+	position: absolute;
+}
+.not-friend span{
+	margin:10px 0  0 10px;
+}
+.not-friend span,
+.not-friend span img{
+	width:30px;
+	height:30px;
+	display: inline-block;
+	-moz-border-radius:30px;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+	-webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+}
+.selected{
+	background-color: yellow;
+	z-index:13;
+}
+.drager{
+	z-index:14;
+}
+.transform{
+	-webkit-transform:rotate(30deg);
+    -moz-transform:rotate(30deg);
+    -ms-transform:rotate(30deg);
+}
+.friend-count{
+	bottom: 3px;
+    left: 17px;
+    line-height: 14px;
+    position: absolute;
+    color: #f00;
+    opacity:1;
+    font-size: 12px;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+}
+.friend-count-add{
+	top: 0;
+    right: 0;
+    opacity:0;
+    font-size: 14px;
+}
+</style>
+</head>	
+<body>
+<div id="friendNotInCycle" class="friend-not-in-cycle"></div>
+<div id="cycleContainer" class="clearfix"></div>	
+<script type="text/javascript" src="../static/js/tangram-1.5.2.source.js"></script>
+<script type="text/javascript" src="../static/js/cycle.js"></script>
+</body>
+</html>
