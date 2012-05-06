@@ -23,11 +23,11 @@
 	position: relative;
 	width:60px;
 	height:60px;
-	border:1px solid blue;
+	border:1px solid #B8B8B8;
 	-moz-border-radius:60px;
 	-webkit-border-radius:60px;
 	border-radius:60px;
-	background-color: #fff;
+	background-color: #ECECEC;
 	-webkit-transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
     -ms-transition:all 0.5s ease 0s;
@@ -42,7 +42,7 @@
 	-moz-border-radius:50px;
 	-webkit-border-radius:50px;
 	border-radius:50px;
-	background-color: blue;
+	background-color: #5E99CD;
 	text-align:center;
 	line-height:50px;
 	color: #fff;
@@ -69,15 +69,18 @@
 }
 
 .friend:hover{
-	border:1px solid blue;
+	border:1px solid #fff;
 	z-index:21;
 }
-
+#cycleContainer{
+	margin-left: 50px;
+}
 #cycleContainer div.cycle-hover{
 	width:120px;
 	height:120px;
 	-moz-border-radius:120px;
 	-webkit-border-radius:120px;
+	-moz-transform:translate(-30px,-30px);
 	border-radius:120px;
 
 }
@@ -99,36 +102,38 @@
     -ms-transition: all 0.5s ease 0s;
 }
 .friend-not-in-cycle{
-	margin-bottom: 20px;
+	margin:0 0 50px 50px;
 	height:50px;
+	position: relative;
 }
 .not-friend {
 	margin-right:20px;
 	width:100px;
 	height:50px;
 	line-height:50px;
-	border:1px solid blue;
+	color: #333;
+	font-size:12px;
+	background-color: #F4F4F4;
+	border:1px solid #AAAAAA;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
 	display: inline-block;
 	text-decoration:none;
 	position: absolute;
 }
 .not-friend span{
-	margin:10px 0  0 10px;
+	margin:10px;
 }
 .not-friend span,
 .not-friend span img{
 	width:30px;
 	height:30px;
 	display: inline-block;
-	-moz-border-radius:30px;
-	-webkit-border-radius:30px;
-	border-radius:30px;
-	-webkit-transition: all 0.5s ease 0s;
-    -moz-transition: all 0.5s ease 0s;
-    -ms-transition: all 0.5s ease 0s;
+	
 }
 .selected{
-	background-color: yellow;
+	background-color: #63ABF7;
 	z-index:13;
 }
 .drager{
@@ -141,10 +146,11 @@
 }
 .friend-count{
 	bottom: 3px;
-    left: 17px;
+    left: 26px;
     line-height: 14px;
     position: absolute;
-    color: #f00;
+    color: #AFCCE6;
+    font-weight:bold;
     opacity:1;
     font-size: 12px;
     -webkit-transition: all 0.5s ease 0s;
